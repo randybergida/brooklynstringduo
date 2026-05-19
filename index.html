@@ -4,26 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brooklyn String Duo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: sans-serif; line-height: 1.6; color: #333; padding: 2rem; }
 
-        /* The container keeps everything centered and at a max width */
         .container {
-            max-width: 600px; /* This keeps your photo and text from getting too wide */
+            max-width: 900px; /* Wider container to fit two columns */
             margin: 0 auto;
+            display: flex; /* This turns on the column system */
+            gap: 2rem;
+            align-items: flex-start; /* Keeps things aligned to the top */
         }
 
+        /* Hero Column (Left) */
+        .hero { flex: 1; }
         .hero img {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 8px; /* Optional: gives it a nice, soft look */
-            margin-bottom: 2rem;
+            border-radius: 8px;
         }
 
-        .content { text-align: center; }
-        h1 { margin-bottom: 1rem; }
+        /* Content Column (Right) */
+        .content { flex: 1; text-align: left; }
+        
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-transform: lowercase;
+        }
+
         .bio { margin-bottom: 2rem; }
 
         .links { display: flex; flex-direction: column; gap: 10px; }
@@ -38,17 +52,22 @@
             transition: background 0.3s;
         }
         .btn:hover { background: #e0e0e0; }
+
+        /* Mobile Responsive: Stack them if screen is narrow */
+        @media (max-width: 768px) {
+            .container { flex-direction: column; text-align: center; }
+            .content { text-align: center; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header class="hero">
-            <!-- Use your square photo here -->
-            <img src="images/hero-square.jpg" alt="Brooklyn String Duo">
+            <img src="images/hero.jpg" alt="Brooklyn String Duo">
         </header>
 
         <main class="content">
-            <h1>Brooklyn String Duo</h1>
+            <h1 class="brand-name">brooklyn string duo</h1>
             <div class="bio">
                 <p>Your bio goes here.</p>
             </div>
