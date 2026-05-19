@@ -19,30 +19,28 @@
         .hero {
             width: 100%;
             position: relative;
-            background: #000; /* Dark background behind image */
+            background: #000;
         }
 
         .hero img {
             width: 100%;
             display: block;
             height: auto;
-            opacity: 0.9; /* Slight dim to help white text pop */
+            opacity: 0.9;
         }
 
-        /* Branding: Fixed to the top as requested */
+        /* Branding: Aligned to the top left */
         .brand-name {
             position: absolute;
-            top: 40px;
-            left: 0;
-            width: 100%;
-            text-align: center;
+            top: 30px; /* Positioned higher */
+            left: 40px; /* Pushed to the left */
             font-family: 'Playfair Display', serif;
-            font-size: 3rem; 
+            font-size: 2.5rem; 
             color: #ffffff;
             text-transform: lowercase;
             letter-spacing: -1px;
             z-index: 2;
-            pointer-events: none; /* Allows clicking through if necessary */
+            pointer-events: none;
         }
 
         .content-area {
@@ -66,7 +64,11 @@
 
         @media (min-width: 600px) {
             .link-grid { grid-template-columns: repeat(3, 1fr); }
-            .brand-name { font-size: 5rem; top: 60px; }
+            .brand-name { 
+                font-size: 5rem; 
+                top: 40px; /* Higher on desktop */
+                left: 60px; /* Further left on desktop */
+            }
         }
 
         .btn {
