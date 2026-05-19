@@ -19,24 +19,22 @@
         .hero {
             width: 100%;
             position: relative;
-            background: #000;
         }
 
         .hero img {
             width: 100%;
             display: block;
             height: auto;
-            opacity: 0.9;
         }
 
-        /* Branding: Aligned to the top left */
+        /* Branding: Higher and in black */
         .brand-name {
             position: absolute;
-            top: 30px; /* Positioned higher */
-            left: 40px; /* Pushed to the left */
+            top: 15px; /* Pushed as high as possible */
+            left: 40px;
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem; 
-            color: #ffffff;
+            color: #1a1a1a; /* Black text */
             text-transform: lowercase;
             letter-spacing: -1px;
             z-index: 2;
@@ -66,8 +64,8 @@
             .link-grid { grid-template-columns: repeat(3, 1fr); }
             .brand-name { 
                 font-size: 5rem; 
-                top: 40px; /* Higher on desktop */
-                left: 60px; /* Further left on desktop */
+                top: 20px; /* Higher on desktop */
+                left: 60px; 
             }
         }
 
