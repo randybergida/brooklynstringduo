@@ -4,79 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brooklyn String Duo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400&display=swap" rel="stylesheet">
     
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: sans-serif; background-color: #000; } /* Black background to frame the full photo */
+        body { font-family: 'Inter', sans-serif; background: #ffffff; color: #000; padding: 2rem; }
 
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-        }
+        .container { max-width: 900px; margin: 0 auto; text-align: center; }
 
-        .hero img {
-            width: 100%;
-            height: 100%;
-            /* 'contain' ensures the WHOLE photo is always seen without any cropping */
-            object-fit: contain; 
-            object-position: center center;
-        }
-
-        /* Title at the top-left */
+        /* Title at the top */
         .brand-name {
-            position: absolute;
-            top: 40px; 
-            left: 40px; 
             font-family: 'Playfair Display', serif;
             font-weight: 700;
-            font-size: 3rem;
-            color: #ffffff;
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
             text-transform: lowercase;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-            z-index: 10;
         }
 
-        /* Links on the right */
-        .links {
-            position: absolute;
-            top: 50%;
-            right: 40px;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
+        /* Photo under the title */
+        .hero img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+        }
+
+        /* Bio area */
+        .bio { margin-bottom: 3rem; font-size: 1.2rem; line-height: 1.6; max-width: 700px; margin-left: auto; margin-right: auto; }
+
+        /* 3-column links */
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            z-index: 10;
+            margin-top: 2rem;
         }
 
         .btn {
             display: block;
-            padding: 12px 24px;
-            background: rgba(255,255,255,0.1);
-            border: 1px solid #ffffff;
-            color: #ffffff;
+            padding: 15px;
+            border: 1px solid #000;
             text-decoration: none;
+            color: #000;
             text-transform: uppercase;
-            letter-spacing: 2px;
             font-size: 0.8rem;
-            text-align: center;
-            transition: all 0.3s;
+            letter-spacing: 1px;
+            transition: background 0.3s, color 0.3s;
         }
-        .btn:hover { background: #ffffff; color: #000; }
+        .btn:hover { background: #000; color: #fff; }
+
+        /* Responsive: stack links on mobile */
+        @media (max-width: 600px) {
+            .link-grid { grid-template-columns: 1fr; }
+            .brand-name { font-size: 2.5rem; }
+        }
     </style>
 </head>
 <body>
-    <header class="hero">
-        <img src="images/hero.jpg" alt="Brooklyn String Duo">
-        
+    <div class="container">
         <h1 class="brand-name">brooklyn string duo</h1>
         
-        <section class="links">
+        <header class="hero">
+            <img src="images/hero.jpg" alt="Brooklyn String Duo">
+        </header>
+
+        <main class="bio">
+            <p>Your bio goes here. This layout puts the photo in the spotlight while keeping the branding and the calls-to-action organized and distinct.</p>
+        </main>
+
+        <section class="link-grid">
             <a href="URL_TO_ORIGINALS" class="btn">Listen to Originals</a>
             <a href="URL_TO_ITUNES" class="btn">The Rotary Sessions</a>
             <a href="URL_TO_NYCM_SPOTIFY" class="btn">Covers</a>
         </section>
-    </header>
+    </div>
 </body>
 </html>
