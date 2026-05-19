@@ -9,69 +9,78 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
-        /* Set body to white to eliminate high-contrast black bars */
         body { 
             font-family: 'Inter', sans-serif; 
             background: #ffffff; 
-            color: #1a1a1a; 
+            color: #1a1a1a;
+            line-height: 1.6;
         }
 
+        /* Hero: Full width, no fixed height to prevent awkward cropping */
         .hero {
+            width: 100%;
             position: relative;
-            width: 100vw;
-            height: 90vh; /* Slightly less than full screen to allow breathing room */
-            background: #ffffff;
+            margin-bottom: 60px;
         }
 
         .hero img {
             width: 100%;
-            height: 100%;
-            object-fit: contain;
-            object-position: center top; 
+            display: block;
+            height: auto;
         }
 
         .brand-name {
             position: absolute;
-            top: 20px; /* Moved much higher */
+            top: 40px;
             left: 40px;
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            color: #1a1a1a; /* Black text on white background */
+            font-size: 2.5rem;
+            color: #1a1a1a;
             text-transform: lowercase;
-            z-index: 2;
+            letter-spacing: -1px;
         }
 
         .content-area {
-            max-width: 700px;
-            margin: 0 auto 60px auto;
-            padding: 40px 20px;
-            line-height: 1.8;
-            font-size: 1.1rem;
+            max-width: 600px; /* Tighter measure for better readability */
+            margin: 0 auto 100px auto;
+            padding: 0 20px;
         }
 
-        .bio-text { margin-bottom: 40px; color: #333; }
+        .bio-text { 
+            margin-bottom: 60px; 
+            font-weight: 300;
+            font-size: 1.2rem;
+            color: #444;
+        }
 
         .link-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            border-top: 1px solid #eee;
-            padding-top: 40px;
+            grid-template-columns: 1fr; /* Stacked on mobile */
+            gap: 15px;
+        }
+
+        /* Responsive grid */
+        @media (min-width: 600px) {
+            .link-grid { grid-template-columns: repeat(3, 1fr); }
         }
 
         .btn {
             display: block;
-            padding: 15px;
+            padding: 18px 10px;
             text-align: center;
             border: 1px solid #1a1a1a;
             color: #1a1a1a;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-            transition: all 0.3s;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            transition: all 0.2s ease;
         }
-        .btn:hover { background: #1a1a1a; color: #fff; }
+        
+        .btn:hover { 
+            background: #1a1a1a; 
+            color: #fff; 
+        }
     </style>
 </head>
 <body>
@@ -82,12 +91,12 @@
 
     <main class="content-area">
         <div class="bio-text">
-            <p>Your long-form bio goes here. Because we moved to a white background, the transition from the image to the text feels seamless, like a high-end print editorial rather than a harsh web layout.</p>
+            <p>New York ceremony music defined by the intimate resonance of nylon string guitar and cello. Captured with a U47 and AEA R84, our recordings strip away the unnecessary, leaving only the composition.</p>
         </div>
 
         <section class="link-grid">
-            <a href="URL_TO_ORIGINALS" class="btn">Listen to Originals</a>
-            <a href="URL_TO_ITUNES" class="btn">The Rotary Sessions</a>
+            <a href="URL_TO_ORIGINALS" class="btn">Originals</a>
+            <a href="URL_TO_ITUNES" class="btn">Rotary Sessions</a>
             <a href="URL_TO_NYCM_SPOTIFY" class="btn">Covers</a>
         </section>
     </main>
