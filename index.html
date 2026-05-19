@@ -4,103 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brooklyn String Duo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
+        /* Set body to white to eliminate high-contrast black bars */
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: #ffffff; 
+            color: #1a1a1a; 
+        }
+
         .hero {
             position: relative;
             width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-            background: #000;
+            height: 90vh; /* Slightly less than full screen to allow breathing room */
+            background: #ffffff;
         }
 
         .hero img {
             width: 100%;
             height: 100%;
-            /* 'contain' keeps the whole image visible, no faces cut off */
             object-fit: contain;
-            /* Adjust this to move the image left/right or up/down if needed */
-            object-position: center 20%; 
+            object-position: center top; 
         }
 
         .brand-name {
             position: absolute;
-            top: 40px;
+            top: 20px; /* Moved much higher */
             left: 40px;
             font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            color: #fff;
+            font-size: 3rem;
+            color: #1a1a1a; /* Black text on white background */
             text-transform: lowercase;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.8);
             z-index: 2;
         }
 
-        .bottom-left-panel {
-            position: absolute;
-            bottom: 40px;
-            left: 40px;
-            max-width: 450px;
-            /* Adds a semi-transparent 'glass' card for readability */
-            background: rgba(0,0,0,0.4); 
-            padding: 25px;
-            border-radius: 4px;
-            z-index: 2;
+        .content-area {
+            max-width: 700px;
+            margin: 0 auto 60px auto;
+            padding: 40px 20px;
+            line-height: 1.8;
+            font-size: 1.1rem;
         }
 
-        .bio {
-            color: #ffffff;
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
+        .bio-text { margin-bottom: 40px; color: #333; }
 
         .link-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 40px;
         }
 
         .btn {
-            display: inline-block;
-            color: #ffffff;
+            display: block;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #1a1a1a;
+            color: #1a1a1a;
             text-decoration: none;
-            font-family: 'Inter', sans-serif;
-            font-weight: 300;
             text-transform: uppercase;
+            font-size: 0.8rem;
             letter-spacing: 1px;
-            font-size: 0.85rem;
-            border-bottom: 1px solid rgba(255,255,255,0.3);
-            width: fit-content;
+            transition: all 0.3s;
         }
-        .btn:hover { border-bottom: 1px solid #fff; }
-
-        @media (max-width: 768px) {
-            .brand-name { font-size: 2rem; }
-            .bottom-left-panel { left: 20px; right: 20px; bottom: 20px; }
-        }
+        .btn:hover { background: #1a1a1a; color: #fff; }
     </style>
 </head>
 <body>
     <header class="hero">
-        <img src="images/hero.jpg" alt="Brooklyn String Duo">
-        
         <h1 class="brand-name">brooklyn string duo</h1>
-        
-        <div class="bottom-left-panel">
-            <main class="bio">
-                <p>We are a professional string duo based in New York, specializing in bespoke arrangements for weddings and private events. Bringing nylon string guitar and cello to your ceremony.</p>
-            </main>
-            
-            <nav class="link-grid">
-                <a href="URL_TO_ORIGINALS" class="btn">Listen to Originals</a>
-                <a href="URL_TO_ITUNES" class="btn">The Rotary Sessions</a>
-                <a href="URL_TO_NYCM_SPOTIFY" class="btn">Covers</a>
-            </nav>
-        </div>
+        <img src="images/hero.jpg" alt="Brooklyn String Duo">
     </header>
+
+    <main class="content-area">
+        <div class="bio-text">
+            <p>Your long-form bio goes here. Because we moved to a white background, the transition from the image to the text feels seamless, like a high-end print editorial rather than a harsh web layout.</p>
+        </div>
+
+        <section class="link-grid">
+            <a href="URL_TO_ORIGINALS" class="btn">Listen to Originals</a>
+            <a href="URL_TO_ITUNES" class="btn">The Rotary Sessions</a>
+            <a href="URL_TO_NYCM_SPOTIFY" class="btn">Covers</a>
+        </section>
+    </main>
 </body>
 </html>
