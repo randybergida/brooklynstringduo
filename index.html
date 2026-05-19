@@ -16,13 +16,19 @@
             text-align: center;
         }
 
+         .hero {
+            width: 100%;
+            height: 400px; /* Forces a consistent height */
+            overflow: hidden; /* Cuts off extra parts of the image so it doesn't spill over */
+            border-radius: 4px;
+            margin-bottom: 2rem;
+        }
+
         .hero img {
             width: 100%;
-            max-width: 700px; /* Limits photo width */
-            height: auto;
-            display: block;
-            margin: 0 auto 2rem auto; /* Centers the image */
-            border-radius: 8px;
+            height: 100%;
+            object-fit: cover; /* Keeps it perfectly contained within the 400px window */
+            object-position: center center; /* Keeps the focus in the middle */
         }
 
         .brand-name {
