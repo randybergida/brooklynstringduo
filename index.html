@@ -3,107 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brooklyn String Duo | New York Ceremony Music</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <title>Brooklyn String Duo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300&display=swap" rel="stylesheet">
     
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background: #ffffff; 
-            color: #1a1a1a;
-            line-height: 1.6;
-        }
-
         .hero {
-            width: 100%;
             position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background: #000;
         }
 
         .hero img {
             width: 100%;
-            display: block;
-            height: auto;
+            height: 100%;
+            object-fit: contain;
+            object-position: center 20%; 
         }
 
-        /* Branding: Higher and in black */
         .brand-name {
             position: absolute;
-            top: 15px; /* Pushed as high as possible */
+            top: 40px;
             left: 40px;
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem; 
-            color: #1a1a1a; /* Black text */
+            font-size: 3.5rem;
+            color: #fff;
             text-transform: lowercase;
-            letter-spacing: -1px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.8);
             z-index: 2;
-            pointer-events: none;
         }
 
-        .content-area {
-            max-width: 600px;
-            margin: 80px auto 100px auto;
-            padding: 0 20px;
+        .bottom-left-panel {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            max-width: 450px;
+            background: rgba(0,0,0,0.4); 
+            padding: 25px;
+            border-radius: 4px;
+            z-index: 2;
         }
 
-        .bio-text { 
-            margin-bottom: 60px; 
-            font-weight: 300;
-            font-size: 1.2rem;
-            color: #444;
+        .bio {
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
 
         .link-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-        }
-
-        @media (min-width: 600px) {
-            .link-grid { grid-template-columns: repeat(3, 1fr); }
-            .brand-name { 
-                font-size: 5rem; 
-                top: 20px; /* Higher on desktop */
-                left: 60px; 
-            }
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         .btn {
-            display: block;
-            padding: 18px 10px;
-            text-align: center;
-            border: 1px solid #1a1a1a;
-            color: #1a1a1a;
+            display: inline-block;
+            color: #ffffff;
             text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
             text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: 2px;
-            transition: all 0.2s ease;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            width: fit-content;
         }
-        
-        .btn:hover { 
-            background: #1a1a1a; 
-            color: #fff; 
+        .btn:hover { border-bottom: 1px solid #fff; }
+
+        @media (max-width: 768px) {
+            .brand-name { font-size: 2rem; }
+            .bottom-left-panel { left: 20px; right: 20px; bottom: 20px; }
         }
     </style>
 </head>
 <body>
     <header class="hero">
-        <h1 class="brand-name">brooklyn string duo</h1>
         <img src="images/hero.jpg" alt="Brooklyn String Duo">
-    </header>
-
-    <main class="content-area">
-        <div class="bio-text">
-            <p>New York ceremony music defined by the intimate resonance of nylon string guitar and cello. Captured with a U47 and AEA R84, our recordings strip away the unnecessary, leaving only the composition.</p>
+        
+        <h1 class="brand-name">brooklyn string duo</h1>
+        
+        <div class="bottom-left-panel">
+            <main class="bio">
+                <p>We are a professional string duo based in New York, specializing in arrangements for weddings and private events. Bringing nylon string guitar and cello to your ceremony.</p>
+            </main>
+            
+            <nav class="link-grid">
+                <a href="URL_TO_ORIGINALS" class="btn">Original Custom Songs</a>
+                <a href="URL_TO_COMMISSIONS" class="btn">Soundtrack Commissions</a>
+                <a href="URL_TO_COVERS" class="btn">Covers</a>
+            </nav>
         </div>
-
-        <section class="link-grid">
-            <a href="URL_TO_ORIGINALS" class="btn">Original Custom Songs</a>
-            <a href="URL_TO_COMMISSIONS" class="btn">Soundtrack Commissions</a>
-            <a href="URL_TO_COVERS" class="btn">Covers</a>
-        </section>
-    </main>
+    </header>
 </body>
 </html>
