@@ -18,17 +18,11 @@
             align-items: flex-start; /* Keeps things aligned to the top */
         }
 
-        /* Hero Column (Left) */
-        .hero { flex: 1; }
-        .hero img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 8px;
-        }
-
-        /* Content Column (Right) */
-        .content { flex: 1; text-align: left; }
+       /* Hero Column (Left) - Takes up 60% of the space */
+        .hero { flex: 1.5; } 
+        
+        /* Content Column (Right) - Takes up 40% of the space */
+        .content { flex: 1; text-align: left; padding-left: 2rem; }
         
         .brand-name {
             font-family: 'Playfair Display', serif;
