@@ -1,3 +1,7 @@
+body {
+    border: 10px solid red !important;
+}
+
 body { font-family: sans-serif; margin: 0; line-height: 1.6; color: #333; }
 .hero img {
     width: 100%;
