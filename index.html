@@ -14,35 +14,39 @@
             width: 100vw;
             height: 100vh;
             overflow: hidden;
-            background: #fff;
+            background: #000;
         }
 
         .hero img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            object-position: center center;
+            /* 'contain' keeps the whole image visible, no faces cut off */
+            object-fit: contain;
+            /* Adjust this to move the image left/right or up/down if needed */
+            object-position: center 20%; 
         }
 
-        /* Title at the top-left */
         .brand-name {
             position: absolute;
-            top: 60px;
-            left: 60px;
+            top: 40px;
+            left: 40px;
             font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            color: #ffffff;
+            font-size: 3.5rem;
+            color: #fff;
             text-transform: lowercase;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.8);
             z-index: 2;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.6);
         }
 
-        /* Bottom-left area containing both Bio and Links */
         .bottom-left-panel {
             position: absolute;
-            bottom: 60px;
-            left: 60px;
-            max-width: 400px; /* Constrains the bio width */
+            bottom: 40px;
+            left: 40px;
+            max-width: 450px;
+            /* Adds a semi-transparent 'glass' card for readability */
+            background: rgba(0,0,0,0.4); 
+            padding: 25px;
+            border-radius: 4px;
             z-index: 2;
         }
 
@@ -50,15 +54,14 @@
             color: #ffffff;
             font-family: 'Inter', sans-serif;
             font-size: 1rem;
-            line-height: 1.5;
-            margin-bottom: 25px;
-            text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
 
         .link-grid {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
         }
 
         .btn {
@@ -68,17 +71,16 @@
             font-family: 'Inter', sans-serif;
             font-weight: 300;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.8rem;
-            text-shadow: 0 1px 4px rgba(0,0,0,0.6);
-            border-bottom: 1px solid transparent;
-            transition: border 0.3s;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            width: fit-content;
         }
         .btn:hover { border-bottom: 1px solid #fff; }
 
         @media (max-width: 768px) {
-            .brand-name { font-size: 2.5rem; top: 40px; left: 40px; }
-            .bottom-left-panel { bottom: 40px; left: 40px; }
+            .brand-name { font-size: 2rem; }
+            .bottom-left-panel { left: 20px; right: 20px; bottom: 20px; }
         }
     </style>
 </head>
