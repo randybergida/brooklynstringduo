@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brooklyn String Duo</title>
+    <title>Brooklyn String Duo | New York Ceremony Music</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     
     <style>
@@ -19,29 +19,30 @@
         .hero {
             width: 100%;
             position: relative;
+            background: #000; /* Dark background behind image */
         }
 
         .hero img {
             width: 100%;
             display: block;
             height: auto;
+            opacity: 0.9; /* Slight dim to help white text pop */
         }
 
-        /* Updated Branding: Larger, white, and centered for impact */
+        /* Branding: Fixed to the top as requested */
         .brand-name {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top: 40px;
+            left: 0;
             width: 100%;
             text-align: center;
             font-family: 'Playfair Display', serif;
-            font-size: 5rem; /* Significant size increase */
+            font-size: 3rem; 
             color: #ffffff;
             text-transform: lowercase;
-            letter-spacing: -2px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3); /* Soft shadow for readability */
+            letter-spacing: -1px;
             z-index: 2;
+            pointer-events: none; /* Allows clicking through if necessary */
         }
 
         .content-area {
@@ -65,7 +66,7 @@
 
         @media (min-width: 600px) {
             .link-grid { grid-template-columns: repeat(3, 1fr); }
-            .brand-name { font-size: 7rem; } /* Even larger on desktop */
+            .brand-name { font-size: 5rem; top: 60px; }
         }
 
         .btn {
@@ -99,9 +100,9 @@
         </div>
 
         <section class="link-grid">
-            <a href="URL_TO_ORIGINALS" class="btn">Originals</a>
-            <a href="URL_TO_ITUNES" class="btn">Rotary Sessions</a>
-            <a href="URL_TO_NYCM_SPOTIFY" class="btn">Covers</a>
+            <a href="URL_TO_ORIGINALS" class="btn">Original Custom Songs</a>
+            <a href="URL_TO_COMMISSIONS" class="btn">Soundtrack Commissions</a>
+            <a href="URL_TO_COVERS" class="btn">Covers</a>
         </section>
     </main>
 </body>
