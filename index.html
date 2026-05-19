@@ -8,78 +8,69 @@
     
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: sans-serif; line-height: 1.6; color: #333; }
+        body { font-family: sans-serif; }
 
-        /* The Hero Container is the "anchor" for everything */
         .hero {
-            position: relative; /* Essential for overlaying text */
+            position: relative;
             width: 100%;
-            height: 100vh; /* Optional: Sets the height to fill the initial screen, creates a huge impact */
-            min-height: 500px; /* Ensures it doesn't get *too* small on short screens */
+            height: 100vh;
             overflow: hidden;
         }
 
         .hero img {
             width: 100%;
             height: 100%;
-            display: block;
-            object-fit: cover; /* Keeps image centered and proportional within the window */
-            object-position: center top; /* Keeps faces and instruments primary if cropping happens */
+            object-fit: cover;
+            object-position: center center;
         }
 
-        /* The Text Overlay */
-        .hero-text {
-            position: absolute; /* Place it *on* the parent (.hero) */
-            top: 50%; /* Start halfway down the image */
-            left: 50%; /* Start halfway across the image */
-            transform: translate(-50%, -50%); /* Perfectly center the text itself */
-            
-            width: 90%; /* Give it some breathing room from the edges */
-            max-width: 800px; /* Optional: Keep text from getting too wide on desktop */
-            text-align: center;
-            
-            color: #ffffff; /* Contrast against the image */
-            /* Text shadow adds a subtle dark outline for readability */
-            text-shadow: 0 4px 10px rgba(0,0,0,0.5); 
-        }
-
+        /* The Title at the Top */
         .brand-name {
+            position: absolute;
+            top: 50px; /* Distance from the top */
+            width: 100%;
+            padding: 0 50px;
+            text-align: center; /* CHANGE TO: left | center | right */
             font-family: 'Playfair Display', serif;
             font-weight: 700;
-            font-size: 4rem; /* Go BIG for impact */
-            text-transform: lowercase; /* Matches your design aesthetic */
-            line-height: 1.1;
-            margin-bottom: 2rem;
-            white-space: nowrap; /* Forces one line (careful on very narrow phones) */
+            font-size: 3.5rem;
+            color: #ffffff;
+            text-transform: lowercase;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            z-index: 10;
         }
 
-        /* The Bio or Links can also be placed inside this overlay */
-        .links { 
-            display: flex; 
-            justify-content: center; /* Center the buttons */
-            gap: 15px; 
-            flex-wrap: wrap; /* Allows them to stack on small screens */
+        /* The Links Stacked on the Right */
+        .links {
+            position: absolute;
+            top: 50%;
+            right: 50px; /* Distance from the right edge */
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 10;
         }
 
         .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: rgba(255,255,255,0.1); /* Subtle, glassy white button */
+            display: block;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.15);
             border: 1px solid #ffffff;
             color: #ffffff;
             text-decoration: none;
-            border-radius: 5px;
             text-transform: uppercase;
+            letter-spacing: 2px;
             font-size: 0.8rem;
-            letter-spacing: 1px;
+            text-align: center;
             transition: all 0.3s;
         }
         .btn:hover { background: #ffffff; color: #333; }
 
-        /* Responsive typography for mobile */
+        /* Responsive: Stack links at the bottom on mobile */
         @media (max-width: 768px) {
-            .brand-name { font-size: 2.5rem; white-space: normal; } /* Allow break on mobile */
-            .links { flex-direction: column; align-items: center; } /* Stack buttons */
+            .brand-name { text-align: center; font-size: 2rem; }
+            .links { right: 0; left: 0; top: auto; bottom: 50px; transform: none; align-items: center; }
         }
     </style>
 </head>
@@ -87,15 +78,13 @@
     <header class="hero">
         <img src="images/hero.jpg" alt="Brooklyn String Duo">
         
-        <div class="hero-text">
-            <h1 class="brand-name">brooklyn string duo</h1>
-            
-            <section class="links">
-                <a href="URL_TO_ORIGINALS" class="btn">Originals</a>
-                <a href="URL_TO_ITUNES" class="btn">The Rotary Sessions</a>
-                <a href="URL_TO_NYCM_SPOTIFY" class="btn">Covers</a>
-            </section>
-        </div>
+        <h1 class="brand-name">brooklyn string duo</h1>
+        
+        <section class="links">
+            <a href="URL_TO_ORIGINALS" class="btn">Listen to Originals</a>
+            <a href="URL_TO_ITUNES" class="btn">The Rotary Sessions</a>
+            <a href="URL_TO_NYCM_SPOTIFY" class="btn">Covers</a>
+        </section>
     </header>
 </body>
 </html>
