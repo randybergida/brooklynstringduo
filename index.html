@@ -4,58 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brooklyn String Duo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background: #ffffff; color: #000; padding: 2rem; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: #ffffff; 
+            color: #1a1a1a; 
+            padding: 4rem 2rem; 
+        }
 
-        .container { max-width: 900px; margin: 0 auto; text-align: center; }
+        .container { max-width: 800px; margin: 0 auto; }
 
-        /* Title at the top */
         .brand-name {
             font-family: 'Playfair Display', serif;
             font-weight: 700;
-            font-size: 3.5rem;
-            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
             text-transform: lowercase;
+            letter-spacing: -0.5px;
         }
 
-        /* Photo under the title */
         .hero img {
             width: 100%;
             height: auto;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
 
-        /* Bio area */
-        .bio { margin-bottom: 3rem; font-size: 1.2rem; line-height: 1.6; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .bio { 
+            margin-bottom: 3rem; 
+            font-size: 1.1rem; 
+            font-weight: 300; 
+            line-height: 1.8; 
+            color: #444; 
+        }
 
-        /* 3-column links */
+        /* Modern 3-column layout without hard boxes */
         .link-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 40px; /* More space between columns */
             margin-top: 2rem;
+            border-top: 1px solid #eee; /* Subtle separator instead of boxes */
+            padding-top: 2rem;
         }
 
         .btn {
             display: block;
-            padding: 15px;
-            border: 1px solid #000;
             text-decoration: none;
-            color: #000;
+            color: #1a1a1a;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-            transition: background 0.3s, color 0.3s;
+            letter-spacing: 1.5px;
+            transition: opacity 0.3s;
         }
-        .btn:hover { background: #000; color: #fff; }
+        .btn:hover { opacity: 0.5; }
 
-        /* Responsive: stack links on mobile */
         @media (max-width: 600px) {
-            .link-grid { grid-template-columns: 1fr; }
-            .brand-name { font-size: 2.5rem; }
+            .link-grid { grid-template-columns: 1fr; gap: 20px; }
         }
     </style>
 </head>
@@ -68,7 +75,7 @@
         </header>
 
         <main class="bio">
-            <p>Your bio goes here. This layout puts the photo in the spotlight while keeping the branding and the calls-to-action organized and distinct.</p>
+            <p>Your bio goes here. Modern web design relies on generous margins and lighter-weight fonts to create that "editorial" feel, moving far away from the rigid, boxed-in look of the past.</p>
         </main>
 
         <section class="link-grid">
