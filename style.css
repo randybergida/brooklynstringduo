@@ -11,15 +11,15 @@ body { background: #000; }
     background: #000;
 }
 
-/* Image containment */
-.hero picture, 
-.hero picture img {
-    display: block;
-    width: 100%;
-    height: 100%;
+/* Visibility logic for images */
+.desktop-img { 
+    display: block; 
+    width: 100%; 
+    height: 100%; 
     object-fit: contain; 
-    object-position: center center;
+    object-position: center center; 
 }
+.mobile-img { display: none; }
 
 /* Brand Name Branding */
 .brand-name {
@@ -92,11 +92,20 @@ body { background: #000; }
 
 /* Responsive & Landscape Adjustments */
 @media (max-width: 768px) and (orientation: portrait) {
+    .desktop-img { display: none; }
+    .mobile-img { 
+        display: block; 
+        width: 100%; 
+        height: 100%; 
+        object-fit: contain; 
+        object-position: center center; 
+    }
+    
     .hero {
         height: auto; 
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centers items horizontally */
+        align-items: center;
     }
     
     .brand-name { 
@@ -108,11 +117,11 @@ body { background: #000; }
         width: 100%;
         text-shadow: none;
         color: #fff;
-        order: 1; /* Puts branding at the top */
+        order: 1;
     }
     
-    .hero picture {
-        order: 2; /* Puts photo below branding */
+    .mobile-img {
+        order: 2;
         height: 50vh;
         margin-bottom: 20px;
         width: 100%;
