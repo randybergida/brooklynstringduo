@@ -11,11 +11,7 @@ body { background: #000; }
     background: #000;
 }
 
-/* 
-   Using 'contain' ensures the full image is always visible 
-   within the hero section. Any extra space will show the 
-   black background defined in .hero.
-*/
+/* Ensures the full image is visible with black borders */
 .hero picture, 
 .hero picture img {
     display: block;
@@ -96,10 +92,16 @@ body { background: #000; }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .brand-name { font-size: 2rem; }
+    .hero {
+        height: 60vh; /* Reduced height to eliminate excess black space */
+    }
+    .brand-name { 
+        font-size: 2rem; 
+        top: 10px; 
+    }
     .content-wrapper { 
         flex-direction: column; 
-        margin-top: -50px;
+        margin-top: -20px; /* Tighter pull-up to the photo */
         margin-left: 20px; 
         margin-right: 20px; 
     }
