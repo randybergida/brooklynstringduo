@@ -11,13 +11,17 @@ body { background: #000; }
     background: #000;
 }
 
-/* Image Handling for Picture/Source */
+/* 
+   Using 'contain' ensures the full image is always visible 
+   within the hero section. Any extra space will show the 
+   black background defined in .hero.
+*/
 .hero picture, 
 .hero picture img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; 
     object-position: center center;
 }
 
