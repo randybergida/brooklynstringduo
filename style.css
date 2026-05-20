@@ -115,6 +115,8 @@ body { background: #000; }
         margin: 20px 0;
         padding: 0;
         width: 100%;
+        display: flex;
+        justify-content: center;
         text-shadow: none;
         color: #fff;
         order: 1;
@@ -125,8 +127,6 @@ body { background: #000; }
         height: 50vh;
         margin-bottom: 20px;
         width: 100%;
-        display: flex;
-        justify-content: center;
     }
     
     .content-wrapper { 
