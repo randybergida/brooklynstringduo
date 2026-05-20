@@ -96,24 +96,28 @@ body { background: #000; }
         height: auto; 
         display: flex;
         flex-direction: column;
+        align-items: center; /* Centers items horizontally */
     }
     
     .brand-name { 
         position: relative; 
         font-size: 2rem; 
         text-align: center;
-        margin: 10px 0;
+        margin: 20px 0;
         padding: 0;
+        width: 100%;
         text-shadow: none;
         color: #fff;
-        order: 1; /* Ensures text sits at the top */
+        order: 1; /* Puts branding at the top */
     }
     
     .hero picture {
-        order: 2; /* Ensures photo sits below the text */
+        order: 2; /* Puts photo below branding */
         height: 50vh;
         margin-bottom: 20px;
         width: 100%;
+        display: flex;
+        justify-content: center;
     }
     
     .content-wrapper { 
