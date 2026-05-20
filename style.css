@@ -32,6 +32,7 @@ body { background: #000; }
     text-transform: lowercase;
     text-shadow: 0 2px 8px rgba(0,0,0,0.8);
     z-index: 2;
+    margin: 0; /* Ensures no default browser margins push it */
 }
 
 /* Layout for Content */
@@ -91,10 +92,10 @@ body { background: #000; }
 .btn-nycm { background-color: #d8c2a4; }
 
 /* Responsive & Landscape Adjustments */
-@media (max-width: 768px) and (orientation: portrait) {
-    .desktop-img { display: none; }
+@media (max-width: 768px) and (orientation: portrait) and (pointer: coarse) {
+    .desktop-img { display: none !important; }
     .mobile-img { 
-        display: block; 
+        display: block !important; 
         width: 100%; 
         height: 100%; 
         object-fit: contain; 
@@ -105,11 +106,12 @@ body { background: #000; }
         height: auto; 
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center; /* Centers everything */
     }
     
     .brand-name { 
         position: relative; 
+        left: auto; /* Resets the absolute left positioning */
         font-size: 2rem; 
         text-align: center;
         margin: 20px 0;
