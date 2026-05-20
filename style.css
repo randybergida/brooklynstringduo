@@ -80,7 +80,7 @@ body { background: #000; }
 
 .btn-originals { background-color: #d8a4a4; }
 .btn-rotary { background-color: #a4d8a8; }
-.btn-covers { background-color: #d8c2a4; }
+.btn-nycm { background-color: #d8c2a4; }
 
 @media (max-width: 768px) {
     .brand-name { font-size: 2rem; }
