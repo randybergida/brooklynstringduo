@@ -37,16 +37,17 @@
             z-index: 2;
         }
 
-        /* The overlapping container */
+        /* The container that overlaps and moves with the scroll */
         .bio-panel {
             position: relative;
             z-index: 3;
-            margin-top: -200px; /* Pulls the panel up to overlap the image */
+            /* This pulls the container up into the hero photo */
+            margin-top: -150px; 
             margin-left: 40px;
             margin-bottom: 80px;
             width: 90%;
             max-width: 550px;
-            background: rgba(0,0,0,0.7); /* Deep glass effect */
+            background: rgba(0,0,0,0.7);
             backdrop-filter: blur(10px);
             padding: 40px;
             border-radius: 4px;
@@ -82,7 +83,7 @@
 
         @media (max-width: 768px) {
             .brand-name { font-size: 2rem; }
-            .bio-panel { margin-top: -100px; margin-left: 20px; padding: 20px; }
+            .bio-panel { margin-top: -80px; margin-left: 20px; padding: 20px; }
         }
     </style>
 </head>
