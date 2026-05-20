@@ -12,9 +12,10 @@ body { background: #000; }
 .hero img {
     width: 100%;
     height: 100%;
-    /* 'cover' fills the space, and '0%' crops the top */
-    object-fit: cover;
-    object-position: center 0%;
+    /* 'contain' ensures the whole photo is visible without cropping */
+    object-fit: contain; 
+    /* This centers the image and eliminates that white strip at the top */
+    object-position: center center; 
 }
 
 .brand-name {
