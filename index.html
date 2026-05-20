@@ -51,7 +51,6 @@
             position: relative;
         }
 
-        /* Bio now holds the translucent background independently */
         .bio {
             flex: 2;
             color: #ffffff;
@@ -64,7 +63,6 @@
             border-radius: 4px;
         }
 
-        /* Links are transparent so the colored buttons stand out */
         .link-grid {
             flex: 1;
             display: flex;
@@ -95,8 +93,13 @@
 
         @media (max-width: 768px) {
             .brand-name { font-size: 2rem; }
-            .content-wrapper { flex-direction: column; margin-left: 20px; margin-right: 20px; }
+            .content-wrapper { 
+                flex-direction: column; 
+                margin-left: 20px; 
+                margin-right: 20px; 
+            }
             .bio { padding: 20px; }
+            .link-grid { width: 100%; }
         }
     </style>
 </head>
