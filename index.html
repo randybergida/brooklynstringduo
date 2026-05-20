@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brooklyn String Duo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;700&display=swap" rel="stylesheet">
     
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -27,7 +27,7 @@
 
         .brand-name {
             position: absolute;
-            top: 40px;
+            top: 20px; /* Adjusted up as you requested */
             left: 40px;
             font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
@@ -37,53 +37,61 @@
             z-index: 2;
         }
 
-        /* The container that overlaps and moves with the scroll */
-        .bio-panel {
-            position: relative;
-            z-index: 3;
-            /* This pulls the container up into the hero photo */
-            margin-top: -150px; 
+        /* The container for Bio and Links side-by-side */
+        .content-wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            align-items: flex-start;
+            width: 90%;
+            max-width: 900px;
+            margin-top: -150px;
             margin-left: 40px;
             margin-bottom: 80px;
-            width: 90%;
-            max-width: 550px;
-            background: rgba(0,0,0,0.7);
-            backdrop-filter: blur(10px);
-            padding: 40px;
-            border-radius: 4px;
+            z-index: 3;
+            position: relative;
         }
 
         .bio {
+            flex: 2; /* Bio takes up more width */
             color: #ffffff;
             font-family: 'Inter', sans-serif;
             font-size: 1rem;
             line-height: 1.6;
-            margin-bottom: 30px;
         }
 
         .link-grid {
+            flex: 1; /* Links take up the right side */
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
 
         .btn {
-            display: inline-block;
-            color: #ffffff;
+            display: block;
+            padding: 20px;
+            text-align: center;
             text-decoration: none;
             font-family: 'Inter', sans-serif;
-            font-weight: 300;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             font-size: 0.8rem;
-            border-bottom: 1px solid rgba(255,255,255,0.4);
-            width: fit-content;
+            color: #000;
+            border-radius: 4px;
+            transition: transform 0.2s ease;
         }
-        .btn:hover { border-bottom: 1px solid #fff; }
+
+        .btn:hover { transform: translateY(-5px); }
+
+        /* Sampled colors - update these hex codes to match your photo exactly */
+        .btn-originals { background-color: #d8a4a4; } /* Soft Pink */
+        .btn-rotary { background-color: #a4d8a8; }    /* Soft Green */
+        .btn-covers { background-color: #d8c2a4; }    /* Soft Orange */
 
         @media (max-width: 768px) {
             .brand-name { font-size: 2rem; }
-            .bio-panel { margin-top: -80px; margin-left: 20px; padding: 20px; }
+            .content-wrapper { flex-direction: column; margin-left: 20px; margin-right: 20px; }
         }
     </style>
 </head>
@@ -93,15 +101,15 @@
         <h1 class="brand-name">brooklyn string duo</h1>
     </header>
 
-    <div class="bio-panel">
+    <div class="content-wrapper">
         <main class="bio">
             <p>In 1999 there was a chance meeting of two unlikely souls in the desert of Tucson Arizona that turned into a lifetime of making music together. They traversed the country to the northwest of Portland, Oregon and then to New York City. Fast forward to today and they are on either side of the globe, Brooklyn and Tokyo, and as prolific as they’ve ever been. Let’s rewind to 2007 when they officially formed their wedding band New York Ceremony Music. They build a repertoire of covers, of coveted covers, and arranged them on their cello and guitar and started to shape their first release which was in 2013, volumes 1-8 of the Rotary Sessions. But they took a little turn just before in 2012 when they were asked to play a weekly residency at the Bellwether on Union and Richardson. Playing this venue didn’t feel right as New York Ceremony Music so they became Brooklyn String Duo and later in 2013 released their 100 songs on iTunes as Brooklyn String Duo. Those recordings know as the Rotary Sessions were solely distributed, solely to iTunes and purposefully left out the streamers of the time. They released their subsequent recordings as New York Ceremony Music until today when they are back to their roots, writing original instrumentals on their cello and guitar as Brooklyn String Duo. There’s so much to listen to so what are you waiting for!</p>
         </main>
         
         <nav class="link-grid">
-            <a href="URL_TO_ORIGINALS" class="btn">Originals</a>
-            <a href="URL_TO_ITUNES" class="btn">Rotary Sessions</a>
-            <a href="URL_TO_COVERS" class="btn">Covers</a>
+            <a href="URL_TO_ORIGINALS" class="btn btn-originals">Originals</a>
+            <a href="URL_TO_ITUNES" class="btn btn-rotary">Rotary Sessions</a>
+            <a href="URL_TO_NYCM_SPOTIFY" class="btn btn-covers">Covers</a>
         </nav>
     </div>
 </body>
