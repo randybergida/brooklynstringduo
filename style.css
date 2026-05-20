@@ -140,3 +140,36 @@ body { background: #000; }
     .bio { padding: 20px; }
     .link-grid { width: 100%; }
 }
+
+@media (max-width: 768px) and (orientation: portrait) {
+    /* 1. Force the hero container to have no extra margin/padding */
+    .hero {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* 2. Ensure the mobile image fills the container */
+    .mobile-img {
+        display: block !important;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* This makes it full screen */
+        object-position: center top; /* Keeps faces in view */
+    }
+
+    /* 3. This puts the text over the image, not below it */
+    .brand-name {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 10;
+        color: #fff;
+        margin: 0;
+    }
+
+    /* 4. Keeps the content-wrapper right under the hero */
+    .content-wrapper {
+        margin-top: 0;
+    }
+}
