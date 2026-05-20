@@ -101,8 +101,8 @@ body { background: #000; }
     font-family: 'Inter', sans-serif;
     font-size: 0.75rem;
     color: #555;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    /* Removed text-transform: uppercase; to avoid all-caps look */
+    letter-spacing: 0.5px;
 }
 
 .site-footer a {
