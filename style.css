@@ -32,7 +32,7 @@ body { background: #000; }
     text-transform: lowercase;
     text-shadow: 0 2px 8px rgba(0,0,0,0.8);
     z-index: 2;
-    margin: 0; /* Ensures no default browser margins push it */
+    margin: 0; 
 }
 
 /* Layout for Content */
@@ -91,6 +91,30 @@ body { background: #000; }
 .btn-rotary { background-color: #a4d8a8; }
 .btn-nycm { background-color: #d8c2a4; }
 
+/* Footer Styles */
+.site-footer {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto 40px 40px;
+    padding: 20px 0;
+    border-top: 1px solid #222;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.site-footer a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: #fff;
+}
+
 /* Responsive & Landscape Adjustments */
 @media (max-width: 768px) and (orientation: portrait) and (pointer: coarse) {
     .desktop-img { display: none !important; }
@@ -106,12 +130,12 @@ body { background: #000; }
         height: auto; 
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centers everything */
+        align-items: center; 
     }
     
     .brand-name { 
         position: relative; 
-        left: auto; /* Resets the absolute left positioning */
+        left: auto; 
         font-size: 2rem; 
         text-align: center;
         margin: 20px 0;
@@ -139,4 +163,10 @@ body { background: #000; }
     }
     .bio { padding: 20px; }
     .link-grid { width: 100%; }
+    
+    .site-footer {
+        margin: 40px auto;
+        text-align: center;
+        border-top: 1px solid #333;
+    }
 }
