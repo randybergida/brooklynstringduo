@@ -19,12 +19,17 @@ body { background: #000; }
 .brand-name {
     position: absolute;
     top: 10px;
-    left: 40px;
+    left: 0; /* Changed from 40px to 0 to span the full width */
+    width: 100%;
+    padding-left: 40px; /* Keep your text offset */
+    padding-top: 10px;
+    padding-bottom: 20px;
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     color: #fff;
     text-transform: lowercase;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    /* Adds the dark background */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
     z-index: 2;
 }
 
