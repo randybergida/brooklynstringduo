@@ -8,13 +8,13 @@
     
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: #000; }
         
         .hero {
             position: relative;
             width: 100vw;
             height: 100vh;
             overflow: hidden;
-            background: #000;
         }
 
         .hero img {
@@ -36,30 +36,31 @@
             z-index: 2;
         }
 
-        .bottom-left-panel {
-            position: absolute;
-            bottom: 40px;
-            left: 40px;
-            width: 90%;
-            max-width: 550px; 
-            background: rgba(0,0,0,0.5); 
-            padding: 30px;
-            border-radius: 4px;
-            z-index: 2;
+        /* The section that flows below the hero */
+        .content-section {
+            width: 100%;
+            background: #000;
+            padding: 80px 40px;
+            color: #fff;
+        }
+
+        .content-container {
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .bio {
-            color: #ffffff;
             font-family: 'Inter', sans-serif;
-            font-size: 0.95rem; /* Slightly tighter for longer text */
-            line-height: 1.5;
-            margin-bottom: 25px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            color: #ccc;
         }
 
         .link-grid {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 20px;
         }
 
         .btn {
@@ -69,36 +70,37 @@
             font-family: 'Inter', sans-serif;
             font-weight: 300;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-size: 0.8rem;
-            border-bottom: 1px solid rgba(255,255,255,0.4);
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
             width: fit-content;
         }
         .btn:hover { border-bottom: 1px solid #fff; }
 
         @media (max-width: 768px) {
             .brand-name { font-size: 2rem; }
-            .bottom-left-panel { left: 20px; right: 20px; bottom: 20px; padding: 20px; }
+            .content-section { padding: 40px 20px; }
         }
     </style>
 </head>
 <body>
     <header class="hero">
         <img src="images/hero.jpg" alt="Brooklyn String Duo">
-        
         <h1 class="brand-name">brooklyn string duo</h1>
-        
-        <div class="bottom-left-panel">
+    </header>
+
+    <section class="content-section">
+        <div class="content-container">
             <main class="bio">
                 <p>In 1999 there was a chance meeting of two unlikely souls in the desert of Tucson Arizona that turned into a lifetime of making music together. They traversed the country to the northwest of Portland, Oregon and then to New York City. Fast forward to today and they are on either side of the globe, Brooklyn and Tokyo, and as prolific as they’ve ever been. Let’s rewind to 2007 when they officially formed their wedding band New York Ceremony Music. They build a repertoire of covers, of coveted covers, and arranged them on their cello and guitar and started to shape their first release which was in 2013, volumes 1-8 of the Rotary Sessions. But they took a little turn just before in 2012 when they were asked to play a weekly residency at the Bellwether on Union and Richardson. Playing this venue didn’t feel right as New York Ceremony Music so they became Brooklyn String Duo and later in 2013 released their 100 songs on iTunes as Brooklyn String Duo. Those recordings know as the Rotary Sessions were solely distributed, solely to iTunes and purposefully left out the streamers of the time. They released their subsequent recordings as New York Ceremony Music until today when they are back to their roots, writing original instrumentals on their cello and guitar as Brooklyn String Duo. There’s so much to listen to so what are you waiting for!</p>
             </main>
             
-            <section class="link-grid">
+            <nav class="link-grid">
                 <a href="URL_TO_ORIGINALS" class="btn">Originals</a>
                 <a href="URL_TO_ITUNES" class="btn">Rotary Sessions</a>
-                <a href="URL_TO_NYCM_SPOTIFY" class="btn">Covers</a>
-            </section>
+                <a href="URL_TO_COVERS" class="btn">Covers</a>
+            </nav>
         </div>
-    </header>
+    </section>
 </body>
 </html>
