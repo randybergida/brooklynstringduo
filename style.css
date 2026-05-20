@@ -1,6 +1,8 @@
+/* Reset and Base Styles */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { background: #000; }
 
+/* Hero Section */
 .hero {
     position: relative;
     width: 100vw;
@@ -9,15 +11,17 @@ body { background: #000; }
     background: #000;
 }
 
-.hero img {
+/* Image Handling for Picture/Source */
+.hero picture, 
+.hero picture img {
+    display: block;
     width: 100%;
     height: 100%;
-    /* 'contain' ensures the whole photo is visible without cropping */
-    object-fit: contain; 
-    /* This centers the image and eliminates that white strip at the top */
-    object-position: center center; 
+    object-fit: cover;
+    object-position: center center;
 }
 
+/* Brand Name Branding */
 .brand-name {
     position: absolute;
     top: 10px;
@@ -30,6 +34,7 @@ body { background: #000; }
     z-index: 2;
 }
 
+/* Layout for Content */
 .content-wrapper {
     display: flex;
     flex-direction: row;
@@ -56,12 +61,7 @@ body { background: #000; }
     border-radius: 4px;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
+/* Button Styles */
 .link-grid {
     flex: 1;
     display: flex;
@@ -90,11 +90,12 @@ img {
 .btn-rotary { background-color: #a4d8a8; }
 .btn-nycm { background-color: #d8c2a4; }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .brand-name { font-size: 2rem; }
     .content-wrapper { 
         flex-direction: column; 
-        margin-top: -50px; /* Adjusted for mobile */
+        margin-top: -50px;
         margin-left: 20px; 
         margin-right: 20px; 
     }
