@@ -27,7 +27,7 @@
 
         .brand-name {
             position: absolute;
-            top: 20px; /* Adjusted up as you requested */
+            top: 10px; /* Moved up as requested */
             left: 40px;
             font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
@@ -37,7 +37,7 @@
             z-index: 2;
         }
 
-        /* The container for Bio and Links side-by-side */
+        /* The container for Bio and Links */
         .content-wrapper {
             display: flex;
             flex-direction: row;
@@ -50,10 +50,15 @@
             margin-bottom: 80px;
             z-index: 3;
             position: relative;
+            /* Added translucent background back for readability */
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 4px;
         }
 
         .bio {
-            flex: 2; /* Bio takes up more width */
+            flex: 2;
             color: #ffffff;
             font-family: 'Inter', sans-serif;
             font-size: 1rem;
@@ -61,7 +66,7 @@
         }
 
         .link-grid {
-            flex: 1; /* Links take up the right side */
+            flex: 1;
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -84,14 +89,13 @@
 
         .btn:hover { transform: translateY(-5px); }
 
-        /* Sampled colors - update these hex codes to match your photo exactly */
-        .btn-originals { background-color: #d8a4a4; } /* Soft Pink */
-        .btn-rotary { background-color: #a4d8a8; }    /* Soft Green */
-        .btn-covers { background-color: #d8c2a4; }    /* Soft Orange */
+        .btn-originals { background-color: #d8a4a4; }
+        .btn-rotary { background-color: #a4d8a8; }
+        .btn-covers { background-color: #d8c2a4; }
 
         @media (max-width: 768px) {
             .brand-name { font-size: 2rem; }
-            .content-wrapper { flex-direction: column; margin-left: 20px; margin-right: 20px; }
+            .content-wrapper { flex-direction: column; margin-left: 20px; margin-right: 20px; padding: 20px; }
         }
     </style>
 </head>
@@ -109,7 +113,7 @@
         <nav class="link-grid">
             <a href="URL_TO_ORIGINALS" class="btn btn-originals">Originals</a>
             <a href="URL_TO_ITUNES" class="btn btn-rotary">Rotary Sessions</a>
-            <a href="URL_TO_NYCM_SPOTIFY" class="btn btn-covers">Covers</a>
+            <a href="URL_TO_COVERS" class="btn btn-covers">Covers</a>
         </nav>
     </div>
 </body>
