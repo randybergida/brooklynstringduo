@@ -11,7 +11,7 @@ body { background: #000; }
     background: #000;
 }
 
-/* Ensures the full image is visible with black borders */
+/* Image containment */
 .hero picture, 
 .hero picture img {
     display: block;
@@ -90,18 +90,29 @@ body { background: #000; }
 .btn-rotary { background-color: #a4d8a8; }
 .btn-nycm { background-color: #d8c2a4; }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
+/* Responsive & Landscape Adjustments */
+@media (max-width: 768px) and (orientation: portrait) {
     .hero {
-        height: 60vh; /* Reduced height to eliminate excess black space */
+        height: auto; 
+        display: flex;
+        flex-direction: column;
     }
     .brand-name { 
+        position: relative; 
         font-size: 2rem; 
-        top: 10px; 
+        text-align: center;
+        margin: 10px 0;
+        padding: 0;
+        text-shadow: none;
+        color: #fff;
+    }
+    .hero picture {
+        height: 50vh;
+        margin-bottom: 20px;
     }
     .content-wrapper { 
         flex-direction: column; 
-        margin-top: -20px; /* Tighter pull-up to the photo */
+        margin-top: 0;
         margin-left: 20px; 
         margin-right: 20px; 
     }
