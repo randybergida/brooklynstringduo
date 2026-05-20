@@ -97,6 +97,7 @@ body { background: #000; }
         display: flex;
         flex-direction: column;
     }
+    
     .brand-name { 
         position: relative; 
         font-size: 2rem; 
@@ -105,11 +106,16 @@ body { background: #000; }
         padding: 0;
         text-shadow: none;
         color: #fff;
+        order: 1; /* Ensures text sits at the top */
     }
+    
     .hero picture {
+        order: 2; /* Ensures photo sits below the text */
         height: 50vh;
         margin-bottom: 20px;
+        width: 100%;
     }
+    
     .content-wrapper { 
         flex-direction: column; 
         margin-top: 0;
