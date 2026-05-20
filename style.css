@@ -18,15 +18,13 @@ body { background: #000; }
 
 .brand-name {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 40px;
+    top: 10px;
+    left: 40px;
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     color: #fff;
     text-transform: lowercase;
-    background: #000;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
     z-index: 2;
 }
 
