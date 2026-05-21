@@ -95,14 +95,16 @@ body { background: #000; }
 .site-footer {
     width: 90%;
     max-width: 900px;
-    margin: 40px auto 40px 40px;
+    /* Changed the margin from '40px auto 40px 40px' to '40px auto' to center the box */
+    margin: 40px auto; 
     padding: 20px 0;
     border-top: 1px solid #222;
     font-family: 'Inter', sans-serif;
     font-size: 0.75rem;
     color: #555;
-    /* Removed text-transform: uppercase; to avoid all-caps look */
     letter-spacing: 0.5px;
+    /* Added text-align center to center the content inside the box */
+    text-align: center; 
 }
 
 .site-footer a {
