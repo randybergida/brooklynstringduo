@@ -54,9 +54,10 @@ body { background: #000; }
     flex: 2;
     color: #ffffff;
     font-family: 'Inter', sans-serif;
-    font-size: 1.15rem;     /* Increased from 1rem */
-    font-weight: 400;       /* Ensure this is at least 400 */
-    line-height: 1.8;       /* Reduced from 2.0 to keep lines closer together */
+    font-size: 1.15rem;
+    font-weight: 300;     /* Thinner, lighter weight */
+    line-height: 1.8;
+    letter-spacing: 0.02em; /* Gives the thin letters room to breathe */
     background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
     padding: 40px;
@@ -64,7 +65,7 @@ body { background: #000; }
 }
 
 .bio p {
-    margin-bottom: 25px;    /* Increased space between paragraphs */
+    margin-bottom: 25px;
 }
 
 /* Button Styles */
