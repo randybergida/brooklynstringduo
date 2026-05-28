@@ -69,11 +69,17 @@ body { background: #000; }
 }
 
 /* Button Styles */
+/* Updated Button Styles */
 .link-grid {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    
+    /* Sticky Effect */
+    position: sticky;
+    top: 40px; 
+    align-self: flex-start;
 }
 
 .btn {
