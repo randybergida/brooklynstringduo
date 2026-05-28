@@ -52,19 +52,14 @@ body { background: #000; }
 
 .bio {
     flex: 2;
-    /* Use a slightly off-white color for better comfort */
-    color: #e0e0e0; 
+    color: #ffffff;
     font-family: 'Inter', sans-serif;
-    font-size: 1.05rem; /* Slightly larger */
-    line-height: 1.8;   /* Increased for breathability */
-    letter-spacing: 0.01em;
-    /* Darken the overlay */
-    background: rgba(0, 0, 0, 0.75); 
-    backdrop-filter: blur(12px); /* Slightly more blur */
+    font-size: 1rem;
+    line-height: 2.0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
     padding: 40px;
     border-radius: 4px;
-    /* Subtle shadow to separate from background */
-    text-shadow: 0 1px 3px rgba(0,0,0,0.5); 
 }
 
 /* Button Styles */
