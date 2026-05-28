@@ -52,7 +52,7 @@ body { background: #000; }
 
 .bio {
     flex: 2;
-    color: #d1d1d1;
+    color: #e0e0e0;
     font-family: 'Inter', sans-serif;
     font-size: 1.15rem;
     font-weight: 300;     /* Thinner, lighter weight */
